@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import {Http} from "@angular/http";
+import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class WorkersService {
@@ -9,6 +11,11 @@ export class WorkersService {
     {name: "Smith", phone: 9929283},
     {name: "Phiaal", phone: 65929283},
   ];
-  constructor() { }
+  constructor(private http: Http) {
 
+  }
+
+  getItemFromServer(): Observable<any> {
+    return this.http.get('https://emitter.pl/api/workers');
+  }
 }

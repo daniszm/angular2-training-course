@@ -8,6 +8,7 @@ import { SearchPipe } from './pipes/search.pipe';
 import { WorkerCardComponent } from './components/worker-card/worker-card.component';
 import { SetColorDirective } from './directives/set-color.directive';
 import {WorkersService} from "./services/workers.service";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {WorkersService} from "./services/workers.service";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [
     WorkersService

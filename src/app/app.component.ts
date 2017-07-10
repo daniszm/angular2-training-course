@@ -17,7 +17,10 @@ export class AppComponent {
 
 
   constructor(workerService: WorkersService) {
-    this.items= workerService.items;
+
+    workerService.getItemFromServer().subscribe((res)=>{
+        this.items = res.json().data;
+      })
   }
 
   showPhone(phone: number) {
