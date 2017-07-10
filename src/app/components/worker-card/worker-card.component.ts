@@ -1,12 +1,14 @@
 import {
   AfterContentChecked, AfterContentInit, AfterViewInit, Component, EventEmitter, Input, OnInit,
-  Output
+  Output, ViewEncapsulation
 } from '@angular/core';
 
 @Component({
   selector: 'app-worker-card',
   templateUrl: './worker-card.component.html',
-  styleUrls: ['./worker-card.component.css']
+  styleUrls: ['./worker-card.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated
+
 })
 export class WorkerCardComponent implements OnInit {
 /*  ngAfterViewInit(): void {

@@ -1,0 +1,9 @@
+$color-main: orange;
+
+div {
+  border: 2px dashed $color-main;
+
+  button {
+    border-radius: 10px;
+  }
+}
